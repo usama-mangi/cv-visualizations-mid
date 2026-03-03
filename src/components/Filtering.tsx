@@ -48,7 +48,7 @@ export default function Filtering() {
         </div>
         <div style={{ background: '#f8fafc', borderRadius: '16px', border: '1px dashed var(--border)', padding: '16px', textAlign: 'center', marginBottom: '24px' }}>
           <img 
-            src="/assets/infographic_filtering.png" 
+            src="assets/infographic_filtering.png" 
             alt="Filtering Infographic" 
             style={{ maxWidth: '100%', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', objectFit: 'contain' }}
           />

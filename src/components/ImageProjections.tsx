@@ -46,7 +46,7 @@ export default function ImageProjections() {
         
         <div style={{ background: '#f8fafc', borderRadius: '16px', border: '1px dashed var(--border)', padding: '16px', textAlign: 'center', marginBottom: '24px' }}>
           <img 
-            src="/assets/infographic_fundamentals.png" 
+            src="assets/infographic_fundamentals.png" 
             alt="Image Fundamentals Infographic" 
             style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', objectFit: 'contain' }}
           />
@@ -101,7 +101,7 @@ export default function ImageProjections() {
 
         <div style={{ background: '#f8fafc', borderRadius: '16px', border: '1px dashed var(--border)', padding: '16px', textAlign: 'center', marginBottom: '24px' }}>
           <img 
-            src="/assets/infographic_projection.png" 
+            src="assets/infographic_projection.png" 
             alt="3D to 2D Projection Pipeline" 
             style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', objectFit: 'contain' }}
           />
