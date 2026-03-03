@@ -1,0 +1,205 @@
+{
+  "title": "Computer Vision Flashcards",
+  "cards": [
+    {
+      "front": "In computer vision, what are image features?",
+      "back": "Distinctive pieces of information, such as edges or corners, extracted from images to act as landmarks for understanding."
+    },
+    {
+      "front": "Which type of image feature describes the image as a whole by capturing overall statistics?",
+      "back": "Global features."
+    },
+    {
+      "front": "Contrast local and global features regarding spatial information.",
+      "back": "Local features preserve $(x, y)$ coordinates, while global features usually lose spatial arrangement."
+    },
+    {
+      "front": "What statistical method is used to describe the texture of a grayscale image by analyzing gray level combinations?",
+      "back": "Gray Level Co-occurrence Matrix (GLCM)."
+    },
+    {
+      "front": "Define 'Blobs' in the context of image features.",
+      "back": "Regions in an image where properties like intensity or color are uniform or vary within a specific range."
+    },
+    {
+      "front": "Which type of feature is most robust to occlusion, scale, and rotation?",
+      "back": "Local features."
+    },
+    {
+      "front": "What does the 'Repeatability' characteristic of a feature detector measure?",
+      "back": "The consistency of finding the same features in an image under different conditions like lighting or viewpoint shifts."
+    },
+    {
+      "front": "In feature detection, what is 'Invariance'?",
+      "back": "The ability of a feature to remain stable and recognizable despite changes in scale, rotation, or illumination."
+    },
+    {
+      "front": "Which characteristic refers to how unique and identifiable a feature is to avoid confusion with similar-looking points?",
+      "back": "Distinctiveness."
+    },
+    {
+      "front": "What is the primary advantage of the FAST corner detector?",
+      "back": "High efficiency and suitability for real-time applications."
+    },
+    {
+      "front": "The _____ algorithm was developed as an efficient, free alternative to SIFT and SURF.",
+      "back": "ORB (Oriented FAST and Rotated BRIEF)"
+    },
+    {
+      "front": "Who invented the SIFT (Scale-Invariant Feature Transform) algorithm?",
+      "back": "David Lowe."
+    },
+    {
+      "front": "What is the first step of the SIFT feature extraction process?",
+      "back": "Scale-space extrema detection."
+    },
+    {
+      "front": "How does SIFT efficiently cover a wide range of scales during extrema detection?",
+      "back": "By building octaves of images that are progressively blurred and then downsampled by a factor of 2."
+    },
+    {
+      "front": "In SIFT, what function is used to detect potential interest points across scales?",
+      "back": "Difference of Gaussians (DoG)."
+    },
+    {
+      "front": "Term: Difference of Gaussians (DoG)",
+      "back": "Definition: The subtraction of two Gaussian-blurred versions of an image at different scales ($k\\sigma$ and $\\sigma$)."
+    },
+    {
+      "front": "How many neighbors is a pixel compared to when detecting local extrema in SIFT DoG images?",
+      "back": "26 neighbors (8 in current scale, 9 in scale above, 9 in scale below)."
+    },
+    {
+      "front": "What technique is used in SIFT to refine candidate keypoints to sub-pixel accuracy?",
+      "back": "A second-order Taylor series expansion of the DoG function."
+    },
+    {
+      "front": "During SIFT keypoint localization, what happens to a keypoint if its contrast value $|D(\\hat{x})|$ is below the threshold (e.g., 0.03)?",
+      "back": "The keypoint is discarded as it is likely caused by noise."
+    },
+    {
+      "front": "What is the purpose of orientation assignment in the SIFT algorithm?",
+      "back": "To achieve rotation invariance by assigning a consistent direction to each keypoint."
+    },
+    {
+      "front": "The standard SIFT descriptor is a vector of how many dimensions?",
+      "back": "128 dimensions."
+    },
+    {
+      "front": "What distance metric is typically used to compare SIFT descriptor vectors during matching?",
+      "back": "Euclidean distance ($L2$ norm)."
+    },
+    {
+      "front": "Explain the SIFT Ratio Test used during descriptor matching.",
+      "back": "It compares the distance of the nearest neighbor to the second nearest neighbor to ensure the match is distinct."
+    },
+    {
+      "front": "What is the fundamental basis for detecting corners in the Harris Corner Detector?",
+      "back": "Analyzing local changes in intensity gradients."
+    },
+    {
+      "front": "In the Harris Corner Detector formula, what does $w(x, y)$ represent?",
+      "back": "A window function, often a Gaussian, that weights pixels near the center more heavily."
+    },
+    {
+      "front": "Contrast SIFT and BRIEF descriptors regarding data type.",
+      "back": "SIFT uses floating-point descriptors, while BRIEF uses binary descriptors."
+    },
+    {
+      "front": "How does the BRIEF descriptor represent a keypoint?",
+      "back": "By performing simple intensity comparisons between pairs of pixels to create a binary string."
+    },
+    {
+      "front": "In CNNs, what is a feature map?",
+      "back": "The output of a convolutional layer that highlights areas in an image most similar to a specific filter."
+    },
+    {
+      "front": "What is the effect of parameter sharing within a CNN feature map?",
+      "back": "It dramatically reduces the number of parameters and allows the model to recognize a pattern regardless of its location."
+    },
+    {
+      "front": "Define 'Padding' in the context of convolutional layers.",
+      "back": "Adding extra pixels, usually zeros, around the borders of an image to control output size and capture edge features."
+    },
+    {
+      "front": "What is the difference between Valid Padding and Same Padding?",
+      "back": "Valid Padding applies no padding and reduces output size, while Same Padding adds pixels so the output matches the input size."
+    },
+    {
+      "front": "What is a 'Receptive Field' in a neural network?",
+      "back": "The specific area of an input or previous layer that a single neuron is sensitive to."
+    },
+    {
+      "front": "In a convolutional layer, what is the role of the bias term?",
+      "back": "It is a scalar value added to the weighted sum of the filter and receptive field at each location."
+    },
+    {
+      "front": "What are the two main parts of a ConvNet used for image classification?",
+      "back": "The convolutional base (pooling and convolution) and the densely connected classifier."
+    },
+    {
+      "front": "Define 'Feature Extraction' when using a pretrained network.",
+      "back": "Taking the convolutional base of a previously trained network and training a new classifier on top of its output."
+    },
+    {
+      "front": "Why is the 'fast' feature extraction technique (without data augmentation) prone to overfitting on small datasets?",
+      "back": "Because it does not use data augmentation, which is essential for preventing overfitting when training data is limited."
+    },
+    {
+      "front": "What does 'freezing' a layer in a neural network mean?",
+      "back": "Preventing the layer's weights from being updated during the training process."
+    },
+    {
+      "front": "What is the goal of 'Fine-tuning' a pretrained model?",
+      "back": "To slightly adjust the top layers of the frozen convolutional base to make them more relevant for the specific new task."
+    },
+    {
+      "front": "What is the first step of fine-tuning a network?",
+      "back": "Add a custom network on top of an already-trained base network."
+    },
+    {
+      "front": "In the fine-tuning process, why is it necessary to train the custom classifier before unfreezing base layers?",
+      "back": "To prevent large gradient updates from the untrained classifier from destroying the useful patterns in the pretrained base."
+    },
+    {
+      "front": "Which layer type should generally NOT be unfrozen during the fine-tuning of a ConvNet?",
+      "back": "Batch normalization layers."
+    },
+    {
+      "front": "The VGG16 architecture was pretrained on which massive dataset?",
+      "back": "ImageNet."
+    },
+    {
+      "front": "In SIFT orientation assignment, what size circular neighborhood is used around a keypoint?",
+      "back": "A radius of $1.5\\sigma$."
+    },
+    {
+      "front": "What is the result of dividing a $16 \\times 16$ window into a $4 \\times 4$ grid of subregions in SIFT descriptor generation?",
+      "back": "16 subregions, each consisting of $4 \\times 4$ pixels."
+    },
+    {
+      "front": "How is the 128-dimensional SIFT descriptor vector normalized to improve illumination invariance?",
+      "back": "It is normalized to unit length, thresholded at 0.2, and then normalized again."
+    },
+    {
+      "front": "What does a kernel (filter) do as it 'slides' over an input image?",
+      "back": "It performs element-wise multiplication with the input region and produces a weighted sum."
+    },
+    {
+      "front": "If a $3 \\times 3$ kernel is used in a convolutional layer, how many weights are applied to the receptive field?",
+      "back": "9 weights."
+    },
+    {
+      "front": "Which characteristic of a feature allows it to be found even if the image is blurry or noisy?",
+      "back": "Repeatability."
+    },
+    {
+      "front": "What is the main drawback of using blobs as features compared to corners?",
+      "back": "Their larger area makes them less precise to locate and more susceptible to uniform lighting changes."
+    },
+    {
+      "front": "Formula: $E(u, v) = \\sum w(x, y) [I(x+u, y+v) - I(x, y)]^2$",
+      "back": "Purpose: Calculating the change in intensity for a small shift $(u, v)$ in Harris Corner Detection."
+    }
+  ]
+}

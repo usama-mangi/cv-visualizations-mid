@@ -1,0 +1,265 @@
+{
+  "title": "Image Processing Flashcards",
+  "cards": [
+    {
+      "front": "In image processing, what mathematical representation is used for a 2D grayscale image?",
+      "back": "$f(x, y)$"
+    },
+    {
+      "front": "How is a 3D color image represented as a mathematical function?",
+      "back": "$f(x, y, c)$, where $c$ represents the color channel (e.g., R, G, B)."
+    },
+    {
+      "front": "Why is a color image pixel considered a vector rather than a single intensity value?",
+      "back": "It holds three different intensity values for the R, G, and B channels."
+    },
+    {
+      "front": "What is the primary practical application of subtracting one image from another?",
+      "back": "It highlights differences between images, often used in motion detection or change analysis."
+    },
+    {
+      "front": "Define 'image filtering'.",
+      "back": "The process of modifying or enhancing an image by manipulating pixel values based on a specific mathematical rule or kernel."
+    },
+    {
+      "front": "What is a 'kernel' in the context of image filtering?",
+      "back": "A small matrix applied to an image to emphasize or suppress specific features like edges or noise."
+    },
+    {
+      "front": "List three common purposes of image filtering.",
+      "back": "Pre-processing, noise reduction, and feature enhancement."
+    },
+    {
+      "front": "What are the two major domains in which image filtering can be classified?",
+      "back": "Spatial Domain and Frequency Domain."
+    },
+    {
+      "front": "How does Spatial Domain filtering operate on an image?",
+      "back": "It operates directly on the pixel values using kernels or neighborhood operations."
+    },
+    {
+      "front": "How does Frequency Domain filtering operate on an image?",
+      "back": "It operates on the frequency representation of the image, typically obtained via the Fourier Transform."
+    },
+    {
+      "front": "In a linear filter, the output pixel is computed as a _____ of the input pixels in the neighborhood.",
+      "back": "Weighted sum (linear combination)"
+    },
+    {
+      "front": "What are the two mathematical properties a filter must follow to be considered 'linear'?",
+      "back": "Additivity and Homogeneity."
+    },
+    {
+      "front": "Give three examples of linear filters.",
+      "back": "Box filter, Gaussian filter, and Sobel filter."
+    },
+    {
+      "front": "How is the output pixel calculated in a non-linear filter?",
+      "back": "By applying a non-linear function (like median, min, or max) to the neighborhood pixels."
+    },
+    {
+      "front": "Give two examples of non-linear filters.",
+      "back": "Median filter and Bilateral filter."
+    },
+    {
+      "front": "In the Spatial domain, how is an image represented?",
+      "back": "By its pixel intensities at specific coordinates."
+    },
+    {
+      "front": "In the Frequency domain, how is an image represented?",
+      "back": "By its sinusoidal components representing variations in brightness."
+    },
+    {
+      "front": "What mathematical operation is used to transform an image from the spatial domain to the frequency domain?",
+      "back": "The Fourier Transform."
+    },
+    {
+      "front": "What do the center regions of a frequency domain image typically represent?",
+      "back": "Low frequencies, which correspond to smooth areas of the image."
+    },
+    {
+      "front": "What do the edge regions of a frequency domain image typically represent?",
+      "back": "High frequencies, which correspond to edges, fine details, or noise."
+    },
+    {
+      "front": "What is the function of 'fftshift' in frequency domain analysis?",
+      "back": "It moves the zero-frequency (DC) component to the center of the spectrum."
+    },
+    {
+      "front": "In the DFT formula, what does the symbol $f(x, y)$ represent?",
+      "back": "The intensity value of the pixel at spatial coordinates $(x, y)$."
+    },
+    {
+      "front": "In the DFT formula, what does the symbol $F(u, v)$ represent?",
+      "back": "The complex frequency component at frequency coordinates $(u, v)$."
+    },
+    {
+      "front": "In the context of the Fourier Transform, what do $M$ and $N$ represent?",
+      "back": "The width (number of columns) and height (number of rows) of the image."
+    },
+    {
+      "front": "What does the symbol $j$ represent in the complex exponential of a Fourier Transform?",
+      "back": "The imaginary unit, defined as $j = \\sqrt{-1}$."
+    },
+    {
+      "front": "What are the three general steps for Frequency Domain Filtering?",
+      "back": "1. Transform to frequency domain; 2. Apply filter mask; 3. Inverse transform to spatial domain."
+    },
+    {
+      "front": "What is the primary purpose of a Low-pass filter in the frequency domain?",
+      "back": "To blur or denoise an image by blocking high frequencies and allowing low frequencies."
+    },
+    {
+      "front": "How does a Low-pass filter appear visually in the frequency domain?",
+      "back": "A bright center (passed low frequencies) and dark edges (blocked high frequencies)."
+    },
+    {
+      "front": "What is the primary purpose of a High-pass filter in the frequency domain?",
+      "back": "To sharpen an image or detect edges by blocking low frequencies and allowing high frequencies."
+    },
+    {
+      "front": "How does a High-pass filter appear visually in the frequency domain?",
+      "back": "A dark center (blocked low frequencies) and bright edges (passed high frequencies)."
+    },
+    {
+      "front": "What is the purpose of a Band-pass filter?",
+      "back": "To allow mid-range frequencies while blocking both very low and very high frequencies, useful for texture analysis."
+    },
+    {
+      "front": "In spatial linear filtering, what is the main difference between Correlation and Convolution?",
+      "back": "Convolution requires flipping the kernel horizontally and vertically before sliding it over the image, while Correlation does not."
+    },
+    {
+      "front": "Concept: Box Filter",
+      "back": "Definition: A linear smoothing filter that replaces each pixel with the average value of its local neighborhood."
+    },
+    {
+      "front": "Why is the Laplacian filter referred to as a 'second-order derivative operator'?",
+      "back": "It computes the second derivatives of the image intensity function in both $x$ and $y$ directions."
+    },
+    {
+      "front": "What is the advantage of using a Laplacian of Gaussian (LoG) filter over a standard Laplacian filter?",
+      "back": "It combines Gaussian smoothing to reduce noise before applying the Laplacian for more robust edge detection."
+    },
+    {
+      "front": "How does a 'High Boost' filter enhance an image?",
+      "back": "By adding a scaled version of the high-frequency components back to the original image."
+    },
+    {
+      "front": "What is the primary use of Directional filters?",
+      "back": "Detecting edges, textures, or patterns aligned at specific orientations."
+    },
+    {
+      "front": "Definition: Gabor Filter",
+      "back": "A linear filter consisting of a sinusoidal signal of a particular frequency and orientation modulated by a Gaussian wave."
+    },
+    {
+      "front": "In Gabor filters, what does the 'Wavelength' ($\\Lambda$) parameter control?",
+      "back": "The spatial frequency of the filter (distance between successive peaks/troughs)."
+    },
+    {
+      "front": "In Gabor filters, what does the 'Aspect Ratio' ($\\gamma$) parameter represent?",
+      "back": "The ellipticity of the Gaussian envelope, or the ratio of $y$-width to $x$-width."
+    },
+    {
+      "front": "Which type of noise is the Median filter specifically designed to remove?",
+      "back": "Salt-and-pepper noise."
+    },
+    {
+      "front": "What is the key advantage of the Median filter over the Mean (Average) filter?",
+      "back": "The Median filter preserves edges much better than the Mean filter."
+    },
+    {
+      "front": "What are 'Image Features' in computer vision?",
+      "back": "Distinctive pieces of information, such as edges, corners, or textures, extracted to represent meaningful patterns."
+    },
+    {
+      "front": "Differentiate between Global and Local features.",
+      "back": "Global features describe the entire image as a whole, while local features are detected at specific keypoints or regions."
+    },
+    {
+      "front": "Give an example of a Global feature.",
+      "back": "Color Histograms or Texture Descriptors (like GLCM)."
+    },
+    {
+      "front": "Define Gray Level Co-occurrence Matrix (GLCM).",
+      "back": "A statistical method that describes texture by measuring how often combinations of gray levels occur next to each other."
+    },
+    {
+      "front": "Give two examples of Local features.",
+      "back": "Corners and Blobs."
+    },
+    {
+      "front": "In computer vision, what is a 'Blob'?",
+      "back": "A region in an image where properties like intensity or color are uniform or connected, representing a single unit of information."
+    },
+    {
+      "front": "What does 'Feature Invariance' mean?",
+      "back": "A feature remains stable and recognizable despite changes in conditions like scale, rotation, or illumination."
+    },
+    {
+      "front": "What does 'Repeatability' measure in feature detection?",
+      "back": "How consistently a detector finds the same features in an image under different viewpoints, lighting, or noise levels."
+    },
+    {
+      "front": "What is a major advantage of the FAST feature extractor?",
+      "back": "It is extremely fast and efficient, making it suitable for real-time systems."
+    },
+    {
+      "front": "What is the main computational innovation of the SURF (Speeded-Up Robust Features) approach?",
+      "back": "It uses integral images and box filters to enable fast computation of operators."
+    },
+    {
+      "front": "What is the purpose of 'Padding' in Convolutional Neural Networks (CNNs)?",
+      "back": "To add extra pixels (usually zeros) around image borders to control output size and ensure edge features are captured."
+    },
+    {
+      "front": "Define 'Valid Padding'.",
+      "back": "A type of padding where no extra pixels are added, which usually results in a reduction of the output feature map size."
+    },
+    {
+      "front": "Define 'Same Padding'.",
+      "back": "Adding enough zero padding so that the output feature map has the same spatial dimensions as the input image."
+    },
+    {
+      "front": "In a CNN filter, what happens if the weight matrix is a $7 \\times 7$ grid of 0s with a central column of 1s?",
+      "back": "The neuron will ignore everything in its receptive field except for a central vertical line."
+    },
+    {
+      "front": "Why is the Frequency domain useful for image compression (like JPEG)?",
+      "back": "It allows for efficient analysis and reduction of image data by targeting specific frequency components."
+    },
+    {
+      "front": "In the DFT formula, what represents the horizontal and vertical frequency indices?",
+      "back": "$u$ and $v$."
+    },
+    {
+      "front": "What type of filter is the Sobel filter categorized as?",
+      "back": "Linear Edge Detection filter."
+    },
+    {
+      "front": "How does a Gaussian filter differ from a Box filter in smoothing?",
+      "back": "A Gaussian filter uses a weighted average based on a Gaussian distribution, whereas a Box filter gives equal weight to all neighbors."
+    },
+    {
+      "front": "The transform from the spatial domain to the frequency domain for images is specifically called the _____.",
+      "back": "2D Discrete Fourier Transform (DFT)"
+    },
+    {
+      "front": "What is the output of the Fourier Transform visually represented as?",
+      "back": "A frequency spectrum, often shown on a log scale for better visualization."
+    },
+    {
+      "front": "Term: SIFT",
+      "back": "Definition: Scale-Invariant Feature Transform; a local feature detection algorithm based on intensity gradients."
+    },
+    {
+      "front": "What is the mathematical nature of a Gabor filter's envelope?",
+      "back": "It is a Gaussian envelope."
+    },
+    {
+      "front": "In local features, why is spatial information preserved?",
+      "back": "Because features are linked to specific $(x, y)$ coordinates in the image."
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "title": "Computer Vision Flashcards",
+  "cards": [
+    {
+      "front": "In linear filtering, how does correlation differ from convolution regarding the kernel?",
+      "back": "Correlation does not flip the kernel horizontally and vertically."
+    },
+    {
+      "front": "What mathematical operation is performed at each position during linear filtering to determine the output pixel value?",
+      "back": "The sum of element-wise multiplication between the kernel and the image patch."
+    },
+    {
+      "front": "What is the primary intuition behind linear filtering?",
+      "back": "It acts as a weighted neighborhood calculation to pick up local features like edges or textures."
+    },
+    {
+      "front": "Why is convolution considered a linear operation?",
+      "back": "The output can be expressed as a linear function of the input pixels."
+    },
+    {
+      "front": "How does a non-linear filter differ from a linear filter in terms of its output calculation?",
+      "back": "It applies a non-linear function, such as taking the median or maximum value, on the neighborhood pixels."
+    },
+    {
+      "front": "What is the specific purpose of a Median filter in image processing?",
+      "back": "It computes the output pixel by taking the median value of the input pixels in the neighborhood."
+    },
+    {
+      "front": "Define 'Image Features' in the context of computer vision.",
+      "back": "Distinctive pieces of information extracted from images that represent meaningful patterns."
+    },
+    {
+      "front": "Contrast 'Global Features' and 'Local Features' based on their scope.",
+      "back": "Global features describe the whole image, while local features are detected at specific keypoints or regions."
+    },
+    {
+      "front": "Give an example of a 'Global Feature' used in scene classification.",
+      "back": "A color histogram representing the distribution of colors across the entire image."
+    },
+    {
+      "front": "What does a Gray Level Co-occurrence Matrix (GLCM) measure?",
+      "back": "How frequently different combinations of gray levels occur next to each other in specific directions and distances."
+    },
+    {
+      "front": "Term: Blob",
+      "back": "Definition: A region in an image where properties like intensity or color are uniform or distinguishable structures."
+    },
+    {
+      "front": "In computer vision, what is the significance of 'Edge' features?",
+      "back": "They represent abrupt changes in brightness or color that signify object boundaries or structural features."
+    },
+    {
+      "front": "Which type of feature (Local or Global) is more robust to occlusion and viewpoint changes?",
+      "back": "Local features."
+    },
+    {
+      "front": "Define 'Feature Invariance'.",
+      "back": "The stability of a feature to remain recognizable despite changes in scale, rotation, or illumination."
+    },
+    {
+      "front": "What does 'Repeatability' measure in a feature detector?",
+      "back": "How consistently the detector finds the same features under different imaging conditions like noise or blur."
+    },
+    {
+      "front": "What does the SIFT algorithm acronym stand for?",
+      "back": "Scale-Invariant Feature Transform."
+    },
+    {
+      "front": "Identify the high-speed corner detection algorithm often used in real-time applications.",
+      "back": "FAST (Features from Accelerated Segment Test)."
+    },
+    {
+      "front": "Which algorithm is described as an efficient, free alternative to SIFT and SURF?",
+      "back": "ORB (Oriented FAST and Rotated BRIEF)."
+    },
+    {
+      "front": "What mathematical expansion is used in SIFT to refine keypoints to sub-pixel accuracy?",
+      "back": "A Taylor series expansion of the Difference of Gaussians (DoG) function."
+    },
+    {
+      "front": "In SIFT keypoint matching, why is a candidate rejected if the distance ratio $(d1 / d2)$ is close to $1$?",
+      "back": "The match is considered ambiguous because multiple points are too similar."
+    },
+    {
+      "front": "Biological study of which part of the brain inspired the creation of Convolutional Neural Networks?",
+      "back": "The visual cortex."
+    },
+    {
+      "front": "What is the 'local receptive field' of a neuron in the visual cortex?",
+      "back": "The limited region of the visual field to which the neuron reacts."
+    },
+    {
+      "front": "What is the primary role of the V1 (Primary Visual Cortex) in the brain?",
+      "back": "Processing basic visual information such as edges, orientations, and simple textures."
+    },
+    {
+      "front": "In the brain-CNN analogy, which cortical area is responsible for complex object and face recognition?",
+      "back": "The IT (Inferotemporal) Cortex."
+    },
+    {
+      "front": "How does the connectivity of a neuron in a convolutional layer differ from one in a standard Dense layer?",
+      "back": "It is connected only to pixels within its small receptive field rather than every pixel in the input."
+    },
+    {
+      "front": "Term: Filter (or Kernel) in CNNs",
+      "back": "Definition: A matrix of weights used to extract specific patterns like vertical or horizontal lines from an input."
+    },
+    {
+      "front": "What is the result of a layer where every neuron uses the exact same filter?",
+      "back": "A feature map highlighting areas most similar to that filter."
+    },
+    {
+      "front": "Define 'Padding' in the context of Convolutional Neural Networks.",
+      "back": "Adding extra pixels, usually zeros, around the borders of an image before convolution."
+    },
+    {
+      "front": "What is the primary purpose of 'Same Padding'?",
+      "back": "To ensure the output feature map has the same spatial dimensions as the input image."
+    },
+    {
+      "front": "In a CNN, what does 'Stride' refer to?",
+      "back": "The distance the filter moves across the input image between each convolution operation."
+    },
+    {
+      "front": "What is the benefit of 'parameter sharing' within a single feature map?",
+      "back": "It reduces the model size and allows the network to recognize a pattern regardless of its location (translation invariance)."
+    },
+    {
+      "front": "How many color channels are typically found in a standard RGB input image?",
+      "back": "$3$ channels."
+    },
+    {
+      "front": "What is the main goal of a 'Pooling Layer'?",
+      "back": "To downsample the input to reduce computational load, memory usage, and the risk of overfitting."
+    },
+    {
+      "front": "Which pooling type takes the maximum value within each patch of a feature map?",
+      "back": "Max Pooling."
+    },
+    {
+      "front": "Why does a pooling neuron lack 'learnable parameters' like weights?",
+      "back": "It only aggregates inputs using fixed functions like maximum or average."
+    },
+    {
+      "front": "What is 'location invariance' in the context of pooling?",
+      "back": "The ability of the network to tolerate small shifts in the input image's position."
+    },
+    {
+      "front": "If a $3 \\times 3$ kernel is used in a convolutional layer, how many weights does that filter contain for a single input channel?",
+      "back": "$9$ weights."
+    },
+    {
+      "front": "In a CNN architecture, what typically follows a convolutional layer?",
+      "back": "A ReLU (Rectified Linear Unit) activation layer."
+    },
+    {
+      "front": "What happens to the spatial dimensions and depth of an image as it moves deeper through a typical CNN?",
+      "back": "The image gets smaller in size but deeper in terms of the number of feature maps."
+    },
+    {
+      "front": "What is the function of the final 'Softmax' layer in a classification CNN?",
+      "back": "To output the estimated probabilities for each possible class."
+    },
+    {
+      "front": "Why is it often better to stack two $3 \\times 3$ kernels instead of using one $9 \\times 9$ kernel?",
+      "back": "It achieves a similar effect with significantly less computational cost."
+    },
+    {
+      "front": "What are the total parameters for a Conv2D layer with $32$ filters of size $3 \\times 3$ and $1$ input channel?",
+      "back": "$320$ parameters (($3 \\times 3 \\times 1) \\times 32$ weights + $32$ biases)."
+    },
+    {
+      "front": "What are the total parameters for a MaxPooling2D layer?",
+      "back": "$0$ parameters."
+    },
+    {
+      "front": "Contrast the patterns learned by Dense layers versus Convolutional layers.",
+      "back": "Dense layers learn global patterns across the whole input space, while Convolutional layers learn local patterns in small windows."
+    },
+    {
+      "front": "What allows CNNs to learn increasingly abstract visual concepts through their layers?",
+      "back": "Their ability to learn spatial hierarchies where later layers combine small patterns into larger, more complex ones."
+    },
+    {
+      "front": "Who created the LeNet-5 architecture and what was its primary application?",
+      "back": "Yann LeCun; it was used for handwritten digit recognition (MNIST)."
+    },
+    {
+      "front": "Identify the first historical CNN to stack convolutional layers directly on top of each other.",
+      "back": "AlexNet."
+    },
+    {
+      "front": "What is the purpose of 'Dropout' in the AlexNet architecture?",
+      "back": "To reduce overfitting by randomly ignoring neurons during training."
+    },
+    {
+      "front": "How does 'Data Augmentation' reduce overfitting in image models?",
+      "back": "It artificially increases the training dataset size by creating variations like horizontal flips and lighting changes."
+    },
+    {
+      "front": "What is the primary innovation of the 'ResNet' architecture?",
+      "back": "The use of skip connections to retain information from earlier layers."
+    },
+    {
+      "front": "In the context of transfer learning, how do the features of earlier layers compare to higher layers?",
+      "back": "Earlier layers encode generic, reusable features, while higher layers encode specialized features."
+    },
+    {
+      "front": "Why is it generally more useful to fine-tune the higher layers of a pre-trained convolutional base?",
+      "back": "They contain specialized features that need to be repurposed for the specific new task."
+    },
+    {
+      "front": "What is the main risk of training too many parameters on a very small dataset?",
+      "back": "Overfitting."
+    },
+    {
+      "front": "Cloze: The _____ cortex analogy in CNNs is the final layers where object recognition and categorization occur.",
+      "back": "Inferotemporal (IT)"
+    },
+    {
+      "front": "Process: Calculate the output size of a $5 \\times 5$ image with a $3 \\times 3$ kernel, stride of $1$, and 'Valid' padding.",
+      "back": "$3 \\times 3$."
+    },
+    {
+      "front": "Formula: If $W$ is filter weights and $X$ is input pixels, the weighted sum for a location in a feature map is represented as _____.",
+      "back": "$\\sum (W_{ij} \\times X_{x+i, y+j}) + \\text{bias}$"
+    },
+    {
+      "front": "What effect does a 'horizontal line filter' have when applied to an image?",
+      "back": "It enhances horizontal white lines while blurring other features."
+    },
+    {
+      "front": "Which historical model achieved super-human performance on visual tasks due to increased data and computational power?",
+      "back": "Convolutional Neural Networks (CNNs)."
+    },
+    {
+      "front": "In SIFT, which step follows 'Scale-space extrema detection'?",
+      "back": "Keypoint localization."
+    },
+    {
+      "front": "What is the 'Translation Invariance' property of CNNs?",
+      "back": "The ability to recognize a learned pattern regardless of its specific location in the image."
+    },
+    {
+      "front": "How does 'Average Pooling' differ from 'Max Pooling'?",
+      "back": "It calculates the average value of a patch instead of selecting the maximum value."
+    },
+    {
+      "front": "Which visual cortex area integrates information from earlier stages to process colors and complex shapes?",
+      "back": "V4."
+    },
+    {
+      "front": "What does a 'Valid Padding' setting do to the output feature map size?",
+      "back": "It reduces the size because the filter only covers pixels where the kernel fits entirely within the input."
+    },
+    {
+      "front": "What is 'Distinctiveness' in feature matching?",
+      "back": "The characteristic that the best match for a feature is significantly better than any other match."
+    },
+    {
+      "front": "What does the GLCM direction $90^{\\circ}$ represent?",
+      "back": "The vertical relationship between gray levels."
+    },
+    {
+      "front": "Why do CNNs represent layers in 2D instead of 1D as in standard feedforward networks?",
+      "back": "To make it easier to match neurons with their corresponding spatial inputs."
+    },
+    {
+      "front": "In the brain, neurons that react to the same line orientation but have overlapping receptive fields are said to _____ the visual field.",
+      "back": "Tile"
+    },
+    {
+      "front": "Which model normalized MNIST images from $28 \\times 28$ to $32 \\times 32$ before processing?",
+      "back": "LeNet-5."
+    },
+    {
+      "front": "If an input feature map is $13 \\times 13 \\times 32$ and a $2 \\times 2$ Max Pooling with stride $2$ is applied, what is the output shape?",
+      "back": "$6 \\times 6 \\times 32$ (rounding down for the $13$ dimension)."
+    },
+    {
+      "front": "How does 'Bilateral filtering' differ from standard smoothing filters?",
+      "back": "It is an edge-preserving smoothing filter that uses non-linear functions."
+    },
+    {
+      "front": "What is the primary reason for 'repurposing' a pre-trained model through fine-tuning?",
+      "back": "To utilize generic features learned on a large dataset for a new, often smaller, dataset."
+    },
+    {
+      "front": "Which feature detector uses the 'Shi-Tomasi' method as an alternative for corner detection?",
+      "back": "Good Features to Track."
+    },
+    {
+      "front": "What constitutes the 'convolutional base' of a CNN?",
+      "back": "The series of convolutional and pooling layers before the fully connected layers."
+    },
+    {
+      "front": "In a CNN, the 'Weighted sum' plus a 'bias' generates what for each location?",
+      "back": "An output value for the feature map."
+    },
+    {
+      "front": "Which vision concept is described as 'landmarks' or 'building blocks' for understanding images?",
+      "back": "Image features."
+    }
+  ]
+}

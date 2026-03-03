@@ -1,0 +1,205 @@
+{
+  "title": "Computer Vision Flashcards",
+  "cards": [
+    {
+      "front": "What are image features in the context of computer vision?",
+      "back": "Distinctive pieces of information, such as edges or textures, extracted from images to act as landmarks."
+    },
+    {
+      "front": "What is the primary role of features in computer vision systems?",
+      "back": "They simplify raw pixel data into useful representations and provide robustness against noise or viewpoint shifts."
+    },
+    {
+      "front": "How do global features differ from local features in their description of an image?",
+      "back": "Global features describe the image as a whole, while local features are detected at specific keypoints or regions."
+    },
+    {
+      "front": "Which type of image feature is most suitable for scene classification or image retrieval?",
+      "back": "Global features."
+    },
+    {
+      "front": "Give an example of a global feature used to represent the distribution of colors in an image.",
+      "back": "Color Histogram."
+    },
+    {
+      "front": "What statistical method is used to describe the texture of a grayscale image by analyzing intensity variation patterns?",
+      "back": "Gray Level Co-occurrence Matrix (GLCM)."
+    },
+    {
+      "front": "In GLCM, what four specific directions are typically used to measure gray level combinations?",
+      "back": "$0^{\\circ}$, $45^{\\circ}$, $90^{\\circ}$, and $135^{\\circ}$."
+    },
+    {
+      "front": "What are local features typically used for in computer vision tasks?",
+      "back": "Object recognition, matching, and tracking."
+    },
+    {
+      "front": "Define 'Edges' in the context of image features.",
+      "back": "Significant, abrupt changes in brightness, color, or texture that signify object boundaries."
+    },
+    {
+      "front": "What is a 'blob' in an image?",
+      "back": "A region where properties like intensity or color are uniform or vary within a defined range."
+    },
+    {
+      "front": "Which type of feature (local or global) preserves spatial location $(x, y)$ information?",
+      "back": "Local features."
+    },
+    {
+      "front": "Why are local features considered more robust than global features?",
+      "back": "They are robust to occlusion, scale changes, and rotation."
+    },
+    {
+      "front": "Contrast the dimensionality of local features versus global features.",
+      "back": "Local features are high-dimensional per keypoint, while global features are lower-dimensional summaries."
+    },
+    {
+      "front": "Name two common algorithms used for corner detection.",
+      "back": "Harris corner detection and Shi-Tomasi (Good Features to Track)."
+    },
+    {
+      "front": "Which specific algorithms are used for detecting blob features?",
+      "back": "Laplacian of Gaussian (LoG) and Difference of Gaussians (DoG)."
+    },
+    {
+      "front": "What does the acronym SIFT stand for?",
+      "back": "Scale-Invariant Feature Transform."
+    },
+    {
+      "front": "What is the primary advantage of the SURF algorithm compared to SIFT?",
+      "back": "SURF is faster while maintaining similar goals."
+    },
+    {
+      "front": "What does the acronym ORB stand for?",
+      "back": "Oriented FAST and Rotated BRIEF."
+    },
+    {
+      "front": "What are the four main steps of the SIFT feature extraction process?",
+      "back": "Scale-space extrema detection, keypoint localization, orientation assignment, and descriptor generation."
+    },
+    {
+      "front": "How is sub-pixel accuracy achieved during SIFT keypoint localization?",
+      "back": "By using a Taylor series expansion of the DoG function $D(x)$ around the candidate keypoint."
+    },
+    {
+      "front": "What is the primary purpose of a pooling layer in a neural network?",
+      "back": "To reduce the input image size and make the network tolerate small image shifts (location invariance)."
+    },
+    {
+      "front": "How does a pooling neuron calculate its output compared to a convolutional neuron?",
+      "back": "A pooling neuron has no weights and uses an aggregation function like max or mean."
+    },
+    {
+      "front": "What was unique about the stacking of layers in the AlexNet architecture compared to LeNet-5?",
+      "back": "It stacked convolutional layers directly on top of each other instead of always alternating with pooling layers."
+    },
+    {
+      "front": "Which two regularization techniques were used in AlexNet to reduce overfitting?",
+      "back": "Dropout (50% rate) and data augmentation."
+    },
+    {
+      "front": "How do skip connections in ResNet prevent vanishing gradients?",
+      "back": "By ensuring the gradient from the skip connection contributes to the flow, making it easier for deeper layers to learn."
+    },
+    {
+      "front": "What is the function of skip connections regarding feature retention?",
+      "back": "They allow the network to retain important information that might have been discarded or distorted by transformation layers."
+    },
+    {
+      "front": "In deep learning, what range of image counts is typically considered a 'small' dataset?",
+      "back": "A few hundred to a few tens of thousands of images."
+    },
+    {
+      "front": "What is the main challenge encountered when training a convnet from scratch on a small dataset?",
+      "back": "Overfitting."
+    },
+    {
+      "front": "List the four main steps for preprocessing image data for a neural network.",
+      "back": "Read files, decode JPEG to RGB pixel grids, convert to floating-point tensors, and rescale values."
+    },
+    {
+      "front": "What rescaling interval is typically preferred by neural networks for pixel values?",
+      "back": "The $[0, 1]$ interval."
+    },
+    {
+      "front": "Which Keras class is used to automatically turn image files on disk into batches of preprocessed tensors?",
+      "back": "ImageDataGenerator."
+    },
+    {
+      "front": "Define 'data augmentation' in the context of computer vision.",
+      "back": "A technique to generate more training data from existing samples using random transformations."
+    },
+    {
+      "front": "What is the primary goal of applying random transformations during data augmentation?",
+      "back": "To ensure the model never sees the exact same picture twice, helping it generalize better."
+    },
+    {
+      "front": "Where is the Dropout layer typically added in a convnet to fight overfitting?",
+      "back": "Right before the densely connected classifier."
+    },
+    {
+      "front": "What is a 'pretrained network'?",
+      "back": "A saved network previously trained on a large dataset, typically for a large-scale classification task."
+    },
+    {
+      "front": "Why can pretrained features from ImageNet be used for unrelated tasks like identifying furniture?",
+      "back": "The spatial hierarchy of features learned acts as a generic model of the visual world."
+    },
+    {
+      "front": "Name three pretrained image-classification models available in `keras.applications`.",
+      "back": "VGG16, ResNet, and MobileNet (or Xception, EfficientNet, DenseNet)."
+    },
+    {
+      "front": "In Keras, how do you 'freeze' a layer or model?",
+      "back": "By setting its `trainable` attribute to `False`."
+    },
+    {
+      "front": "What is the trade-off of using data augmentation during feature extraction with a pretrained base?",
+      "back": "It is much slower and more computationally expensive than extraction without augmentation."
+    },
+    {
+      "front": "Define the 'fine-tuning' technique for model reuse.",
+      "back": "Unfreezing top layers of a frozen base and jointly training them with the newly added classifier."
+    },
+    {
+      "front": "What is the first step in the fine-tuning process?",
+      "back": "Add a custom network on top of an already-trained base network."
+    },
+    {
+      "front": "Why is it recommended to freeze the base network before training the added custom network in fine-tuning?",
+      "back": "To prevent the large gradients of the randomly initialized top layers from destroying the pretrained weights."
+    },
+    {
+      "front": "Why are higher layers in a convolutional base better candidates for fine-tuning than earlier layers?",
+      "back": "Earlier layers encode generic features, while higher layers encode specialized features relevant to the specific problem."
+    },
+    {
+      "front": "Why is it risky to fine-tune an entire convolutional base on a small dataset?",
+      "back": "The base contains millions of parameters, which creates a high risk of overfitting on small data."
+    },
+    {
+      "front": "In the VGG16 fine-tuning example, which specific layers are typically unfrozen for training?",
+      "back": "The last three convolutional layers (block5_conv1, block5_conv2, and block5_conv3)."
+    },
+    {
+      "front": "How does the training data requirement for transfer learning compare to traditional competition requirements?",
+      "back": "Transfer learning can achieve high accuracy (e.g., 98.5%) using only a small fraction (e.g., 10%) of the original data."
+    },
+    {
+      "front": "Which type of feature extraction is used to establish a baseline without preventing overfitting?",
+      "back": "Fast feature extraction without data augmentation."
+    },
+    {
+      "front": "The method of measuring how often combinations of gray levels occur next to each other is known as _____.",
+      "back": "GLCM (Gray Level Co-occurrence Matrix)."
+    },
+    {
+      "front": "What is the purpose of orientation assignment in SIFT?",
+      "back": "To achieve rotation invariance by assigning a consistent orientation to keypoints based on local gradients."
+    },
+    {
+      "front": "What is the effect of using `ImageDataGenerator` on image-classification accuracy for small datasets?",
+      "back": "It mitigates overfitting and improves generalization, leading to higher accuracy (e.g., from 71% to 82%)."
+    }
+  ]
+}

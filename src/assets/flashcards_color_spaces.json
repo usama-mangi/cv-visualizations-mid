@@ -1,0 +1,285 @@
+{
+  "title": "Computer Vision Flashcards",
+  "cards": [
+    {
+      "front": "What are image features?",
+      "back": "Distinctive pieces of information, such as edges or corners, extracted from raw pixel data."
+    },
+    {
+      "front": "In computer vision, how do global features differ from local features?",
+      "back": "Global features describe the entire image as a whole, while local features describe specific keypoints or regions."
+    },
+    {
+      "front": "Which type of image feature is most suitable for tasks like scene classification and image retrieval?",
+      "back": "Global features."
+    },
+    {
+      "front": "Give an example of a global color-based feature descriptor.",
+      "back": "Color Histograms."
+    },
+    {
+      "front": "What statistical method is used to describe the texture of a grayscale image by measuring gray level combinations?",
+      "back": "Gray Level Co-occurrence Matrix (GLCM)."
+    },
+    {
+      "front": "What is the primary function of local features in object recognition and tracking?",
+      "back": "They capture distinctive patterns at local areas that are robust to occlusion and viewpoint shifts."
+    },
+    {
+      "front": "In the context of local features, what is a 'blob'?",
+      "back": "A grouping of connected pixels with uniform properties like intensity or color."
+    },
+    {
+      "front": "How do local features compare to global features regarding spatial information?",
+      "back": "Local features preserve $(x, y)$ location information, whereas global features usually lose spatial arrangement."
+    },
+    {
+      "front": "The ability of a feature to remain stable and recognizable despite changes in scale, rotation, or lighting is called _____.",
+      "back": "Invariance"
+    },
+    {
+      "front": "What metric measures how consistently a detector can find the same features in an image under varying conditions like noise or blur?",
+      "back": "Repeatability"
+    },
+    {
+      "front": "In feature extraction, why is dimensionality reduction important?",
+      "back": "It reduces data size while preserving essential information, improving algorithm speed and efficiency."
+    },
+    {
+      "front": "Which classical feature detector identifies corners by analyzing local intensity changes in multiple directions?",
+      "back": "Harris Corner Detector"
+    },
+    {
+      "front": "In the Harris Corner Detector, what is the 'aperture problem' associated with edges?",
+      "back": "Ambiguity caused by a point looking similar along the entire length of a one-dimensional edge structure."
+    },
+    {
+      "front": "What is the name of the $2 \\times 2$ matrix used in the Harris Corner Detector to capture local gradient information?",
+      "back": "Structure Tensor (or Matrix $M$)."
+    },
+    {
+      "front": "In Harris Corner Detection, what image structure is indicated if both eigenvalues ($\\lambda_1, \\lambda_2$) of the structure tensor are large?",
+      "back": "A corner."
+    },
+    {
+      "front": "What does a single large eigenvalue and one small eigenvalue indicate in the Harris Corner Detector?",
+      "back": "An edge."
+    },
+    {
+      "front": "Write the Harris corner response function $R$ using the determinant and trace of matrix $M$.",
+      "back": "$R = \\det(M) - k(\\text{trace}(M))^2$"
+    },
+    {
+      "front": "What is the typical empirical value range for the constant $k$ in the Harris corner response function?",
+      "back": "0.04 to 0.06."
+    },
+    {
+      "front": "What does the SIFT acronym stand for?",
+      "back": "Scale-Invariant Feature Transform."
+    },
+    {
+      "front": "Who invented the SIFT algorithm in 1999?",
+      "back": "David Lowe."
+    },
+    {
+      "front": "What are the four main steps of SIFT feature extraction?",
+      "back": "Scale-space extrema detection, keypoint localization, orientation assignment, and descriptor generation."
+    },
+    {
+      "front": "In SIFT, what mathematical operator is used to efficiently approximate the Laplacian of Gaussian for scale-space detection?",
+      "back": "Difference of Gaussians (DoG)."
+    },
+    {
+      "front": "How many total neighbors is a pixel compared against to determine if it is a local extremum in SIFT scale-space?",
+      "back": "26 neighbors."
+    },
+    {
+      "front": "In SIFT, what technique is used to refine the location of a candidate keypoint to sub-pixel accuracy?",
+      "back": "Taylor series expansion of the DoG function."
+    },
+    {
+      "front": "What is the standard contrast threshold used in SIFT to discard low-contrast, unstable keypoints?",
+      "back": "0.03"
+    },
+    {
+      "front": "Why does SIFT assign one or more orientations to each keypoint?",
+      "back": "To achieve rotation invariance."
+    },
+    {
+      "front": "The standard SIFT descriptor is a vector with how many dimensions?",
+      "back": "128 dimensions."
+    },
+    {
+      "front": "How is the 128-dimensional SIFT descriptor calculated?",
+      "back": "By creating 8-bin orientation histograms for each subregion in a $4 \\times 4$ grid around the keypoint."
+    },
+    {
+      "front": "What distance metric is commonly used to compare SIFT descriptor vectors during matching?",
+      "back": "Euclidean distance ($L2$ norm)."
+    },
+    {
+      "front": "What is the purpose of the 'Ratio Test' during SIFT descriptor matching?",
+      "back": "To reject ambiguous matches by ensuring the best match is significantly better than the second-best."
+    },
+    {
+      "front": "What does the FAST acronym stand for?",
+      "back": "Features from Accelerated Segment Test."
+    },
+    {
+      "front": "What is the core criterion for a pixel to be considered a corner in the FAST algorithm?",
+      "back": "A set of contiguous pixels in a circle around it must all be significantly brighter or darker than the center."
+    },
+    {
+      "front": "How many pixels are in the circular ring tested by the FAST algorithm?",
+      "back": "16 pixels."
+    },
+    {
+      "front": "How many contiguous pixels are usually required in practice for FAST to confirm a corner?",
+      "back": "12 pixels."
+    },
+    {
+      "front": "In the FAST early rejection test, which four pixel positions are checked first?",
+      "back": "1, 5, 9, and 13 (the 'compass' positions)."
+    },
+    {
+      "front": "What post-processing step is used in FAST to remove redundant, clustered detections?",
+      "back": "Non-Maximum Suppression (NMS)."
+    },
+    {
+      "front": "What is the primary advantage of FAST over detectors like Harris or SIFT?",
+      "back": "High computational speed, making it suitable for real-time systems."
+    },
+    {
+      "front": "What is a major limitation of the FAST corner detector compared to SIFT?",
+      "back": "It is not scale-invariant or rotation-invariant."
+    },
+    {
+      "front": "What does the SURF acronym stand for?",
+      "back": "Speeded Up Robust Features."
+    },
+    {
+      "front": "Which data structure does SURF use to achieve fast computation of box filters?",
+      "back": "Integral Images."
+    },
+    {
+      "front": "What matrix does SURF rely on for interest point detection?",
+      "back": "Hessian Matrix."
+    },
+    {
+      "front": "How does the descriptor size of SURF compare to the standard SIFT descriptor?",
+      "back": "SURF descriptors are typically 64-dimensional, whereas SIFT is 128-dimensional."
+    },
+    {
+      "front": "Which type of descriptors use simple intensity comparisons to produce a bit-string, such as [1, 0, 0, 1]?",
+      "back": "Binary descriptors (e.g., BRIEF)."
+    },
+    {
+      "front": "What is the primary benefit of using binary descriptors like BRIEF?",
+      "back": "They are very fast to compute and match compared to floating-point descriptors."
+    },
+    {
+      "front": "In computer vision research, what constitutes a 'small' dataset?",
+      "back": "Anywhere from a few hundred to a few tens of thousands of images."
+    },
+    {
+      "front": "When training a ConvNet from scratch on a very small dataset, what is the most common problem encountered?",
+      "back": "Overfitting."
+    },
+    {
+      "front": "What classification accuracy was achieved in the cat vs. dog experiment when training a small ConvNet from scratch without regularization?",
+      "back": "71%"
+    },
+    {
+      "front": "What technique uses random transformations like rotation or flipping to artificially increase the size of a training set?",
+      "back": "Data Augmentation."
+    },
+    {
+      "front": "In the cat vs. dog experiment, what accuracy was reached by adding data augmentation to the model trained from scratch?",
+      "back": "82%"
+    },
+    {
+      "front": "What is 'feature extraction' in the context of using a pre-trained network?",
+      "back": "Using the representations learned by a previously trained network to extract features from new samples."
+    },
+    {
+      "front": "What range of accuracy was achieved in the cat vs. dog task by using feature extraction with a pre-trained network?",
+      "back": "90% to 96%"
+    },
+    {
+      "front": "What technique involves slightly adjusting the weights of the top layers of a pre-trained model to make them more relevant for a specific task?",
+      "back": "Fine-tuning."
+    },
+    {
+      "front": "What was the final accuracy achieved in the cat vs. dog study after fine-tuning a pre-trained network?",
+      "back": "97%"
+    },
+    {
+      "front": "Which platform provided the dog vs. cat dataset used in the Week 06 example?",
+      "back": "Kaggle."
+    },
+    {
+      "front": "In the dog vs. cat project, how many images were allocated to the final training set per class?",
+      "back": "1,000 images."
+    },
+    {
+      "front": "How many samples per class were included in the validation and test sets for the small-dataset experiment?",
+      "back": "500 samples each."
+    },
+    {
+      "front": "Which two specific deep learning frameworks are mentioned as tools for the course?",
+      "back": "TensorFlow and PyTorch."
+    },
+    {
+      "front": "What term describes AI that makes the internal logic of Computer Vision models understandable to humans?",
+      "back": "Explainable AI (XAI)."
+    },
+    {
+      "front": "What newer architecture is listed as a key topic alongside CNNs in the course intro?",
+      "back": "Vision Transformer."
+    },
+    {
+      "front": "In SIFT, what happens to the image at the end of each octave?",
+      "back": "It is downsampled by a factor of 2 to create the first image of the next octave."
+    },
+    {
+      "front": "What is the purpose of the Hessian matrix in SURF interest point detection?",
+      "back": "It is used to identify blob-like structures based on local intensity curvature."
+    },
+    {
+      "front": "How does SIFT improve illumination invariance in its descriptor generation step?",
+      "back": "By normalizing the descriptor vector to unit length and thresholding values above 0.2."
+    },
+    {
+      "front": "What does a zero score represent in the context of SIFT matching using Euclidean distance?",
+      "back": "A perfect match between descriptors."
+    },
+    {
+      "front": "In the FAST algorithm, if the early rejection test fails (fewer than 3 of the 4 compass pixels match), what happens?",
+      "back": "The candidate pixel is immediately rejected as a corner."
+    },
+    {
+      "front": "The sum of intensity differences over the longest contiguous arc in the FAST algorithm defines the _____.",
+      "back": "Corner strength (or score)"
+    },
+    {
+      "front": "Why is SIFT considered 'robust'?",
+      "back": "It can match features despite changes in scale, rotation, illumination, and some affine transformations."
+    },
+    {
+      "front": "According to the course intro, what is the consequence of submitting a duplicate assignment?",
+      "back": "A grade of zero."
+    },
+    {
+      "front": "What is the total duration of the Computer Vision course lectures?",
+      "back": "14 weeks."
+    },
+    {
+      "front": "Concept: Feature Distinctiveness",
+      "back": "Definition: How unique and identifiable a feature is, helping to avoid confusion between similar points."
+    },
+    {
+      "front": "In SURF, how is the determinant of the Hessian matrix used?",
+      "back": "A large determinant indicates a strong blob-like structure suitable for a keypoint."
+    }
+  ]
+}

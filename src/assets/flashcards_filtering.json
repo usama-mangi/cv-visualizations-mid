@@ -1,0 +1,249 @@
+{
+  "title": "Image Flashcards",
+  "cards": [
+    {
+      "front": "What defines a linear filter in image processing?",
+      "back": "The output pixel is a weighted sum (linear combination) of the input pixels in the neighborhood."
+    },
+    {
+      "front": "How is a linear filter mathematically represented in the spatial domain?",
+      "back": "It is represented by convolution with a kernel (or filter mask)."
+    },
+    {
+      "front": "Identify three common examples of linear filters.",
+      "back": "Box filter, Gaussian filter, and Sobel filter."
+    },
+    {
+      "front": "What is the primary characteristic of a non-linear filter's output?",
+      "back": "The output pixel is computed using a non-linear function and cannot be expressed as a simple sum of weighted pixel values."
+    },
+    {
+      "front": "Non-linear filters often involve operations such as median, conditional checks, and _____.",
+      "back": "Min/Max operations"
+    },
+    {
+      "front": "Identify three common examples of non-linear filters or operations.",
+      "back": "Median filter, Bilateral filter, and Morphological operations."
+    },
+    {
+      "front": "In image representation, how is the spatial domain defined?",
+      "back": "The image is represented by pixel intensities at specific coordinates."
+    },
+    {
+      "front": "In image representation, how is the frequency domain defined?",
+      "back": "The image is represented by sinusoidal components reflecting variations in brightness."
+    },
+    {
+      "front": "Which mathematical operation is used to transform an image from the spatial domain to the frequency domain?",
+      "back": "Fourier Transform"
+    },
+    {
+      "front": "What is a primary advantage of using the frequency domain for image filtering?",
+      "back": "It enables better analysis of textures, patterns, and edges."
+    },
+    {
+      "front": "What is the primary purpose of a Low-Pass frequency domain filter?",
+      "back": "Smoothing (it keeps low frequencies and removes high frequencies)."
+    },
+    {
+      "front": "What is the primary purpose of a High-Pass frequency domain filter?",
+      "back": "Edge detection (it keeps high frequencies and removes low frequencies)."
+    },
+    {
+      "front": "Which frequency range is preserved by a Band-Pass filter to assist in texture analysis?",
+      "back": "Mid-range frequencies"
+    },
+    {
+      "front": "Linearity Rule: What is the 'Additivity' property of a linear filter?",
+      "back": "The Output of $(A + B) = $ Output of $A +$ Output of $B$."
+    },
+    {
+      "front": "Linearity Rule: What is the 'Homogeneity' property of a linear filter?",
+      "back": "The Output of $(kA) = k \\times$ Output of $A$."
+    },
+    {
+      "front": "What is the key procedural difference between convolution and cross-correlation?",
+      "back": "Convolution requires flipping the kernel horizontally and vertically before sliding it over the image."
+    },
+    {
+      "front": "What does cross-correlation measure between a kernel and a local image patch?",
+      "back": "Similarity"
+    },
+    {
+      "front": "Concept: Box (averaging) Filter",
+      "back": "Definition: A filter that replaces each pixel with the average of its neighbors using a kernel where all elements have the same value."
+    },
+    {
+      "front": "What is the mathematical requirement for the elements of a box filter kernel?",
+      "back": "All elements must have the same value and sum up to $1$."
+    },
+    {
+      "front": "How does a Gaussian filter differ from a box filter in terms of visual results?",
+      "back": "The Gaussian filter adds a soft, natural blur, whereas the box filter adds a harsh, uniform blur."
+    },
+    {
+      "front": "Why is a Laplacian filter referred to as a second-order derivative operator?",
+      "back": "It computes the second derivatives of the image intensity function in both the horizontal ($x$) and vertical ($y$) directions."
+    },
+    {
+      "front": "What is the primary goal of a sharpening filter?",
+      "back": "To enhance edges and fine details by emphasizing high-frequency components."
+    },
+    {
+      "front": "Procedure: Laplacian of Gaussian (LoG) Filter",
+      "back": "Step 1: Apply Gaussian smoothing to reduce noise; Step 2: Apply the Laplacian operator to detect edges."
+    },
+    {
+      "front": "In Laplacian edge detection, how are edges localized during Step 4?",
+      "back": "Zero-crossing detection (identifying points where the Laplacian changes sign)."
+    },
+    {
+      "front": "What do edges typically represent in an image gradient context?",
+      "back": "High gradient magnitudes"
+    },
+    {
+      "front": "The Sobel filter is robust to noise because it combines Gaussian smoothing with _____.",
+      "back": "Differentiation"
+    },
+    {
+      "front": "What specific edge orientations are highlighted by Sobel kernels?",
+      "back": "Vertical and horizontal edges"
+    },
+    {
+      "front": "Concept: Gabor Filter",
+      "back": "Definition: A Gaussian-modulated sinusoid filter that is sensitive to specific frequencies and orientations."
+    },
+    {
+      "front": "In Gabor filter parameters, what does the Wavelength ($\\Lambda$) control?",
+      "back": "The spatial frequency of the filter."
+    },
+    {
+      "front": "In Gabor filter parameters, what does the Orientation ($\\Theta$) define?",
+      "back": "The angle of the filter's parallel stripes."
+    },
+    {
+      "front": "Why is a Median filter particularly effective for 'salt-and-pepper' noise removal?",
+      "back": "It removes extreme outlier values by replacing the center pixel with the median value of the neighborhood."
+    },
+    {
+      "front": "What is a major advantage of the Median filter over the Mean (average) filter regarding edges?",
+      "back": "The Median filter preserves edges better than average filtering."
+    },
+    {
+      "front": "Identify the five standard steps of the Canny edge detection algorithm.",
+      "back": "1. Noise reduction, 2. Gradient calculation, 3. Non-maximum suppression, 4. Double thresholding, 5. Hysteresis tracking."
+    },
+    {
+      "front": "Canny Edge Detection: What is the purpose of Non-maximum suppression?",
+      "back": "To thin thick edges down to one-pixel-wide lines by keeping only local maxima in the gradient direction."
+    },
+    {
+      "front": "Canny Edge Detection: How are 'weak' edges handled during the Hysteresis step?",
+      "back": "Weak edges are retained only if they are connected to 'strong' edges; otherwise, they are discarded."
+    },
+    {
+      "front": "What is the difference between global and local image features?",
+      "back": "Global features describe the whole image (e.g., color histograms), while local features describe specific keypoints (e.g., corners)."
+    },
+    {
+      "front": "Concept: Global Features",
+      "back": "Definition: Properties or statistics capturing the overall appearance of an image, useful for scene classification."
+    },
+    {
+      "front": "What does a Gray Level Co-occurrence Matrix (GLCM) measure?",
+      "back": "How often combinations of gray levels occur next to each other in specific directions and distances."
+    },
+    {
+      "front": "Concept: Local Features",
+      "back": "Definition: Distinctive patterns detected at specific regions or keypoints, such as corners, blobs, or edges."
+    },
+    {
+      "front": "In computer vision, what defines a 'blob'?",
+      "back": "A region where properties like intensity or color are uniform or vary within a defined range."
+    },
+    {
+      "front": "Identify the primary steps of the Harris Corner Detector algorithm.",
+      "back": "1. Compute gradients, 2. Compute gradient products, 3. Apply Gaussian smoothing, 4. Calculate matrix $M$, 5. Compute response $R$, 6. Threshold and NMS."
+    },
+    {
+      "front": "In Harris corner detection, how is the Corner Response ($R$) utilized?",
+      "back": "It is thresholded to identify pixels that likely represent corners."
+    },
+    {
+      "front": "What is a 'feature map' in the context of a convolutional layer?",
+      "back": "The output produced after applying a specific filter (kernel) to the input data."
+    },
+    {
+      "front": "In a single feature map of a CNN, what do all the neurons share?",
+      "back": "They share the same parameters, specifically weights and bias terms."
+    },
+    {
+      "front": "How does a convolutional layer differ from a dense (fully connected) layer regarding pattern learning?",
+      "back": "Dense layers learn global patterns across the whole input, while convolutional layers learn local patterns in small windows."
+    },
+    {
+      "front": "What is meant by the 'spatial hierarchy' of patterns learned by convnets?",
+      "back": "Early layers learn simple features (edges), while subsequent layers combine them to learn complex abstract concepts."
+    },
+    {
+      "front": "What is the primary purpose of 'SAME' padding in a convolutional layer?",
+      "back": "To ensure that the output feature map has the same spatial dimensions (height and width) as the input."
+    },
+    {
+      "front": "Convnets are described as 'translation invariant'. What does this mean?",
+      "back": "A pattern learned in one part of an image can be recognized by the network in any other part of the image."
+    },
+    {
+      "front": "In the frequency domain, what does keeping only high frequencies result in?",
+      "back": "Edge detection"
+    },
+    {
+      "front": "In the frequency domain, what does keeping only low frequencies result in?",
+      "back": "Smoothing"
+    },
+    {
+      "front": "What is the mathematical definition of a $3 \\times 3$ Box filter kernel?",
+      "back": "A $3 \\times 3$ matrix where every element is $\\frac{1}{9}$."
+    },
+    {
+      "front": "Why is noise reduction (Step 1) recommended before applying a Laplacian filter?",
+      "back": "Because derivatives (especially second-order) amplify noise, leading to false edge detection."
+    },
+    {
+      "front": "In Canny edge detection, what are the three classifications of edges resulting from Double Thresholding?",
+      "back": "Strong edges (above high threshold), weak edges (between thresholds), and non-edges (below low threshold)."
+    },
+    {
+      "front": "What is the 'Aspect Ratio' ($\\gamma$) parameter in a Gabor filter?",
+      "back": "The ellipticity of the Gaussian envelope, defined as the ratio of $y$-width to $x$-width."
+    },
+    {
+      "front": "In local vs. global features, which category is more robust to occlusion and scale changes?",
+      "back": "Local features"
+    },
+    {
+      "front": "What is the role of 'Non-maximum suppression' in Harris Corner Detection?",
+      "back": "To localize corners by suppressing neighboring pixels that are not local maxima of the response $R$."
+    },
+    {
+      "front": "What determines the spatial extent or spread of a Gabor filter's Gaussian envelope?",
+      "back": "Bandwidth (Sigma, $\\sigma$)"
+    },
+    {
+      "front": "In Canny Edge Detection Step 2, which operator is typically used to calculate gradients?",
+      "back": "Sobel operators (for $G_x$ and $G_y$)."
+    },
+    {
+      "front": "Why is the Gradient direction in Canny Edge Detection rounded to four specific angles?",
+      "back": "To represent horizontal, vertical, and the two diagonal directions for pixel comparison."
+    },
+    {
+      "front": "Procedure: Convolution",
+      "back": "1. Flip kernel; 2. Slide over image; 3. Element-wise multiply and sum; 4. Replace center pixel."
+    },
+    {
+      "front": "Procedure: Median Filtering",
+      "back": "1. Extract neighborhood; 2. Sort values; 3. Select median; 4. Replace center pixel."
+    }
+  ]
+}

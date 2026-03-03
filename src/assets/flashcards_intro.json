@@ -1,0 +1,233 @@
+{
+  "title": "Vision Flashcards",
+  "cards": [
+    {
+      "front": "What is the weightage of the Final Exam in the Computer Vision course?",
+      "back": "50%"
+    },
+    {
+      "front": "What is the weightage of the Midterm Exam?",
+      "back": "30%"
+    },
+    {
+      "front": "How many marks is a student awarded for attendance above 95%?",
+      "back": "2 marks"
+    },
+    {
+      "front": "What is the penalty for copying an assignment from a classmate?",
+      "back": "All involved students receive zero marks."
+    },
+    {
+      "front": "What is the instructor Dr. Mohammad Asif Khan's PhD specialization?",
+      "back": "Mobile Robotics"
+    },
+    {
+      "front": "Which three software tools are primarily used in this course?",
+      "back": "Python, TensorFlow / PyTorch, and Google Colab."
+    },
+    {
+      "front": "How long is the lecture duration for the course?",
+      "back": "14 weeks"
+    },
+    {
+      "front": "What is the consequence of a late assignment submission?",
+      "back": "The student will receive zero marks."
+    },
+    {
+      "front": "According to the Class Discipline Guidelines, what is the policy for mobile phones during class?",
+      "back": "They must be kept on silent with no texting or calling allowed."
+    },
+    {
+      "front": "In computer vision, what is an image defined as?",
+      "back": "A visual representation of a person, object, or scene."
+    },
+    {
+      "front": "The geometric transformation from a 3D world to a 2D image is called _____.",
+      "back": "Perspective Projection"
+    },
+    {
+      "front": "In the perspective projection model, objects appear smaller as they move farther away due to the variable _____.",
+      "back": "$Z$ (Depth)"
+    },
+    {
+      "front": "What does the Latin root *perspicere* mean in the context of perspective?",
+      "back": "To see through"
+    },
+    {
+      "front": "In perspective projection, all lines used for mapping 3D points to a 2D plane converge at the _____.",
+      "back": "Camera center (or focal point)"
+    },
+    {
+      "front": "Which historical art period first derived the techniques for depicting realistic depth on flat surfaces?",
+      "back": "The Renaissance"
+    },
+    {
+      "front": "Camera Calibration is the process of determining which two types of parameters?",
+      "back": "Intrinsics and Extrinsics"
+    },
+    {
+      "front": "Which camera parameters describe how the camera maps the 3D world to its internal image plane?",
+      "back": "Intrinsics"
+    },
+    {
+      "front": "Which camera parameters describe the position and orientation of the camera relative to the world coordinate frame?",
+      "back": "Extrinsics"
+    },
+    {
+      "front": "The distance between the center of projection and the image plane is defined as the _____.",
+      "back": "Focal length (or camera constant $C$)"
+    },
+    {
+      "front": "In Isaac Newton's experiments, what happens when a component color from a prism is passed through a second prism?",
+      "back": "It does not split into further components."
+    },
+    {
+      "front": "A grayscale image pixel represents only _____.",
+      "back": "Intensity"
+    },
+    {
+      "front": "In the grayscale color space, what pixel value represents pure black?",
+      "back": "0"
+    },
+    {
+      "front": "In the grayscale color space, what pixel value represents pure white?",
+      "back": "255"
+    },
+    {
+      "front": "Which color space is typically used when color is not essential to reduce data and simplify processing?",
+      "back": "Grayscale"
+    },
+    {
+      "front": "What is the primary function of a kernel in image filtering?",
+      "back": "To modify or enhance an image by manipulating pixel values based on a mathematical rule."
+    },
+    {
+      "front": "In Canny edge detection, how are edges classified if their intensity gradient falls between the minVal and maxVal thresholds?",
+      "back": "They are considered edges only if they are connected to 'sure-edge' pixels."
+    },
+    {
+      "front": "Which category of image features describes the image as a whole and captures overall statistics?",
+      "back": "Global Features"
+    },
+    {
+      "front": "Which category of image features is detected at specific keypoints or local regions?",
+      "back": "Local Features"
+    },
+    {
+      "front": "What is a 'Gray Level Co-occurrence Matrix' (GLCM) used to measure?",
+      "back": "Texture patterns based on how often combinations of gray levels occur next to each other."
+    },
+    {
+      "front": "In computer vision, what is a 'blob'?",
+      "back": "A region in an image where properties like intensity or color are uniform."
+    },
+    {
+      "front": "How do local features differ from global features regarding spatial information?",
+      "back": "Local features preserve location ($(x, y)$ coordinates), while global features usually lose spatial arrangement."
+    },
+    {
+      "front": "Which type of feature is most robust to occlusion, scale, and rotation?",
+      "back": "Local Features"
+    },
+    {
+      "front": "Term: SIFT",
+      "back": "Definition: Scale-Invariant Feature Transform; a local feature extraction algorithm that is scale and rotation invariant."
+    },
+    {
+      "front": "Term: FAST",
+      "back": "Definition: Features from Accelerated Segment Test; a high-speed corner detection algorithm."
+    },
+    {
+      "front": "What is the primary goal of Feature Extraction?",
+      "back": "To transform raw pixel data into a reduced set of measurable, meaningful patterns for easier analysis."
+    },
+    {
+      "front": "Which algorithm is described as an efficient, free alternative to SIFT/SURF suitable for real-time applications?",
+      "back": "ORB (Oriented FAST and Rotated BRIEF)"
+    },
+    {
+      "front": "In the SIFT algorithm, how are initial candidate keypoints refined for sub-pixel accuracy?",
+      "back": "Using a Taylor series expansion."
+    },
+    {
+      "front": "How many pixels are typically in the circle used by the FAST algorithm to test for a corner?",
+      "back": "16 pixels"
+    },
+    {
+      "front": "For a pixel $p$ to be considered a corner in FAST, it must have a contiguous arc of at least _____ pixels brighter or darker than the threshold.",
+      "back": "12 pixels"
+    },
+    {
+      "front": "What type of descriptor is used by SIFT and SURF?",
+      "back": "Floating-point descriptors"
+    },
+    {
+      "front": "What type of descriptor is used by the BRIEF algorithm?",
+      "back": "Binary descriptors (bit strings)"
+    },
+    {
+      "front": "What is the main advantage of the BRIEF algorithm?",
+      "back": "High speed and efficiency in computation and matching."
+    },
+    {
+      "front": "Convolutional Neural Networks (CNNs) were originally inspired by the study of the brain's _____.",
+      "back": "Visual cortex"
+    },
+    {
+      "front": "What was the first CNN architecture to stack convolutional layers directly on top of each other?",
+      "back": "AlexNet"
+    },
+    {
+      "front": "What dropout rate did the authors of AlexNet apply to layers F8 and F9 to reduce overfitting?",
+      "back": "50%"
+    },
+    {
+      "front": "In AlexNet, which two data augmentation techniques were used to reduce overfitting?",
+      "back": "Randomly shifting/flipping images and changing lighting conditions."
+    },
+    {
+      "front": "A Convolutional Neural Network used for image classification is typically composed of which two main parts?",
+      "back": "A convolutional base and a densely connected classifier."
+    },
+    {
+      "front": "What components make up the 'convolutional base' of a Convnet?",
+      "back": "A series of pooling and convolution layers."
+    },
+    {
+      "front": "In the context of pre-trained models, what does 'feature extraction' consist of?",
+      "back": "Taking the convolutional base of a trained network and training a new classifier on top of its output."
+    },
+    {
+      "front": "Which classic CNN architecture is mentioned as being similar to AlexNet but much smaller?",
+      "back": "LeNet-5"
+    },
+    {
+      "front": "What is the purpose of the 'max pooling' operation in a CNN?",
+      "back": "To reduce the spatial dimensions (width and height) of the input data."
+    },
+    {
+      "front": "In Assignment 02, what task must be performed on color spaces like RGB, HSV, and Lab?",
+      "back": "Show each channel separately and show the image with the brightness channel removed."
+    },
+    {
+      "front": "What are the four compass directions (angles) used when measuring a Gray Level Co-occurrence Matrix (GLCM)?",
+      "back": "$0^\\circ, 45^\\circ, 90^\\circ,$ and $135^\\circ$."
+    },
+    {
+      "front": "Which feature detection algorithm uses simple intensity comparisons at pairs of points to form a binary string?",
+      "back": "BRIEF"
+    },
+    {
+      "front": "The process of determining camera intrinsics and extrinsics is called camera _____.",
+      "back": "Calibration"
+    },
+    {
+      "front": "What does the 'S' stand for in the SURF algorithm?",
+      "back": "Speeded-Up (Speeded-Up Robust Features)"
+    },
+    {
+      "front": "Which specific pixels (clock positions) does FAST pick first for its accelerated corner test?",
+      "back": "Positions 1, 5, 9, and 13 (12, 3, 6, and 9 o'clock)."
+    }
+  ]
+}

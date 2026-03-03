@@ -1,0 +1,305 @@
+{
+  "title": "Vision Flashcards",
+  "cards": [
+    {
+      "front": "How is an image defined in the context of computer vision?",
+      "back": "A visual representation of a person, object, or scene."
+    },
+    {
+      "front": "What characterizes an analog image compared to a digital one?",
+      "back": "It is a continuous representation of visual information and is not made of pixels."
+    },
+    {
+      "front": "Give three examples of analog images.",
+      "back": "Film photography, paintings, and printed photos."
+    },
+    {
+      "front": "What are the individual \"tiny color squares\" that compose a digital image called?",
+      "back": "Pixels (or picture elements)."
+    },
+    {
+      "front": "Term: Image Resolution",
+      "back": "Definition: The total number of pixels in an image, expressed as width $\\times$ height (e.g., $1920 \\times 1080$)."
+    },
+    {
+      "front": "What are the only two possible colors in a binary image?",
+      "back": "Black and white."
+    },
+    {
+      "front": "How does a grayscale image differ from a binary image?",
+      "back": "It contains various shades of gray ranging from black to white."
+    },
+    {
+      "front": "Which three color values are stored in each pixel of an RGB image?",
+      "back": "Red, Green, and Blue."
+    },
+    {
+      "front": "Concept: Bit Depth",
+      "back": "Definition: The number of bits used per pixel, which determines the range of available colors."
+    },
+    {
+      "front": "How does a computer represent a grayscale image in memory?",
+      "back": "As a 2D matrix (array) of intensity values."
+    },
+    {
+      "front": "How does a computer represent an RGB color image in memory?",
+      "back": "As a 3D matrix (array) with dimensions of Width $\\times$ Height $\\times$ 3."
+    },
+    {
+      "front": "In the mathematical function for a grayscale image $f(x, y)$, what do the variables $x$ and $y$ represent?",
+      "back": "Spatial coordinates (position) in the image."
+    },
+    {
+      "front": "In the mathematical function for a color image $f(x, y, c)$, what does the variable $c$ represent?",
+      "back": "The color channel (e.g., Red, Green, or Blue)."
+    },
+    {
+      "front": "Why is a color image pixel described as a vector rather than a single intensity value?",
+      "back": "It holds three different intensity values simultaneously ($R$, $G$, and $B$)."
+    },
+    {
+      "front": "What is the primary purpose of subtracting one image from another in change analysis?",
+      "back": "To highlight the differences between the two images."
+    },
+    {
+      "front": "Concept: Perspective Projection",
+      "back": "Definition: A geometric transformation from 3D to 2D that simulates how the human eye or camera perceives depth."
+    },
+    {
+      "front": "In perspective projection, what is the relationship between an object's distance and its apparent size?",
+      "back": "Objects farther away appear smaller."
+    },
+    {
+      "front": "What is the single convergence point for projection lines in a camera model called?",
+      "back": "The camera center (or focal point)."
+    },
+    {
+      "front": "In the 3D camera coordinate system $(X, Y, Z)$, which coordinate represents depth?",
+      "back": "The $Z$ coordinate."
+    },
+    {
+      "front": "What is the Latin name for a pinhole camera, meaning \"dark chamber\"?",
+      "back": "Camera obscura."
+    },
+    {
+      "front": "How does a pinhole camera project an image onto its back surface?",
+      "back": "Light travels in straight lines through a tiny aperture, creating an inverted image."
+    },
+    {
+      "front": "In a pinhole camera, what is the trade-off for using a smaller hole?",
+      "back": "The image becomes sharper but dimmer."
+    },
+    {
+      "front": "Why do digital and analog cameras use a lens instead of just a pinhole?",
+      "back": "To focus light from a larger aperture, creating a sharp image while letting in more light."
+    },
+    {
+      "front": "What is the light-sensitive medium used in the back of an analog camera?",
+      "back": "Film."
+    },
+    {
+      "front": "Why are images on analog film called \"negatives\"?",
+      "back": "The chemical layer reacts with light such that bright objects appear dark and vice versa."
+    },
+    {
+      "front": "What is the function of a camera's flash in relation to the aperture and lens?",
+      "back": "It provides a burst of light to ensure enough light enters the camera for a clear exposure."
+    },
+    {
+      "front": "What component in a digital camera replaces the film used in analog cameras?",
+      "back": "An image sensor."
+    },
+    {
+      "front": "Term: Megapixel",
+      "back": "Definition: A unit representing one million pixels on an image sensor."
+    },
+    {
+      "front": "What are camera \"intrinsics\"?",
+      "back": "Internal parameters of the camera, such as focal length and principal point."
+    },
+    {
+      "front": "Concept: Principal Point",
+      "back": "Definition: The specific location on the image sensor where the principal axis passes through."
+    },
+    {
+      "front": "Which camera parameter is required for analog cameras but is almost zero in digital cameras?",
+      "back": "The shear parameter ($s$)."
+    },
+    {
+      "front": "Define chromaticity (or chrominance).",
+      "back": "Color information of a pixel excluding its brightness (luminance)."
+    },
+    {
+      "front": "What two properties combine to form chromaticity?",
+      "back": "Hue and Saturation."
+    },
+    {
+      "front": "What is the standard intensity range for an 8-bit grayscale pixel?",
+      "back": "0 (Black) to 255 (White)."
+    },
+    {
+      "front": "Why is grayscale conversion used in complex computer vision algorithms?",
+      "back": "It reduces data and simplifies processing while retaining essential structural information."
+    },
+    {
+      "front": "Write the weighted Luma formula used to compute grayscale from an RGB image.",
+      "back": "$Gray = 0.2989 \\cdot R + 0.5870 \\cdot G + 0.1140 \\cdot B$"
+    },
+    {
+      "front": "Why is the Green channel weighted most heavily ($0.5870$) in the Luma formula?",
+      "back": "The human eye is naturally more sensitive to green light."
+    },
+    {
+      "front": "What defines an \"additive\" color system like RGB?",
+      "back": "Colors are created by mixing different intensities of light."
+    },
+    {
+      "front": "What characterizes a linear filter in image processing?",
+      "back": "The output pixel is a weighted sum (linear combination) of the input pixels in its neighborhood."
+    },
+    {
+      "front": "List two examples of linear filters.",
+      "back": "Gaussian filter and Sobel filter."
+    },
+    {
+      "front": "How is the output of a non-linear filter calculated?",
+      "back": "Using a non-linear function of neighborhood pixels, such as the median, minimum, or maximum."
+    },
+    {
+      "front": "List two examples of non-linear filters.",
+      "back": "Median filter and Bilateral filter."
+    },
+    {
+      "front": "In image processing, what does the spatial domain represent?",
+      "back": "The image as represented by its pixel intensities at specific coordinates."
+    },
+    {
+      "front": "In image processing, what does the frequency domain represent?",
+      "back": "The image as represented by its sinusoidal components (variations in brightness)."
+    },
+    {
+      "front": "Which mathematical transform is used to move an image from the spatial domain to the frequency domain?",
+      "back": "The Fourier Transform (specifically 2D DFT)."
+    },
+    {
+      "front": "In a frequency domain visualization, what do the edges of the image represent?",
+      "back": "High frequencies, which correspond to edges and noise."
+    },
+    {
+      "front": "In a frequency domain visualization, what does the center of the image represent?",
+      "back": "Low frequencies, which correspond to smooth areas."
+    },
+    {
+      "front": "What are image features?",
+      "back": "Distinctive pieces of information, such as edges or corners, extracted to understand an image."
+    },
+    {
+      "front": "Contrast global features and local features.",
+      "back": "Global features describe the whole image, while local features are detected at specific keypoints."
+    },
+    {
+      "front": "Give an example of a global feature.",
+      "back": "A color histogram or texture descriptor."
+    },
+    {
+      "front": "Concept: Gray Level Co-occurrence Matrix (GLCM)",
+      "back": "Definition: A statistical method used to describe texture by measuring how often combinations of gray levels occur next to each other."
+    },
+    {
+      "front": "Which four directions are typically used when calculating a GLCM?",
+      "back": "$0^\\circ, 45^\\circ, 90^\\circ,$ and $135^\\circ$."
+    },
+    {
+      "front": "Define a corner in computer vision.",
+      "back": "A point where two or more edges meet."
+    },
+    {
+      "front": "Define a blob in an image.",
+      "back": "A region where properties like intensity or color are uniform or vary within a small range."
+    },
+    {
+      "front": "What is the advantage of local features regarding occlusion?",
+      "back": "They are robust to occlusion because they only require specific regions to be visible."
+    },
+    {
+      "front": "What does feature invariance mean?",
+      "back": "A feature remains stable and recognizable despite changes in scale, rotation, or illumination."
+    },
+    {
+      "front": "Term: Repeatability",
+      "back": "Definition: The consistency with which a detector finds the same features under different conditions like noise or viewpoint changes."
+    },
+    {
+      "front": "Name two types of local gradient-based features.",
+      "back": "SIFT (Scale-Invariant Feature Transform) and SURF (Speeded-Up Robust Features)."
+    },
+    {
+      "front": "What does the ORB algorithm provide an efficient alternative to?",
+      "back": "SIFT and SURF."
+    },
+    {
+      "front": "What is the main difference between SIFT and BRIEF descriptors?",
+      "back": "SIFT uses floating-point values based on gradients, while BRIEF uses binary strings based on intensity comparisons."
+    },
+    {
+      "front": "Why is the BRIEF descriptor considered fast and efficient?",
+      "back": "It uses simple binary intensity comparisons rather than complex gradient calculations."
+    },
+    {
+      "front": "What kind of image feature would a 7 $\\times$ 7 matrix of 0s with a central column of 1s detect?",
+      "back": "A vertical line."
+    },
+    {
+      "front": "The _____ domain enables better analysis of texture, patterns, and edges than the spatial domain.",
+      "back": "Frequency"
+    },
+    {
+      "front": "A grayscale image is stored as a _____ array, whereas an RGB image is stored as a 3D array.",
+      "back": "2D"
+    },
+    {
+      "front": "In digital cameras, the _____ parameter is almost zero, meaning the pixel grid is perfectly rectangular.",
+      "back": "Shear"
+    },
+    {
+      "front": "_____ is a high-speed corner detection method mentioned in the source material.",
+      "back": "FAST"
+    },
+    {
+      "front": "The Fourier Transform variable $F(u, v)$ represents the _____ frequency component at coordinates $(u, v)$.",
+      "back": "Complex"
+    },
+    {
+      "front": "Which specific filter is used to remove noise while preserving edges?",
+      "back": "Bilateral filter (or Median filter)."
+    },
+    {
+      "front": "If an image is treated as a mathematical function, what operation can be performed to highlight motion between frames?",
+      "back": "Image subtraction."
+    },
+    {
+      "front": "What is the term for the distribution of colors across an entire image?",
+      "back": "Color Histogram."
+    },
+    {
+      "front": "What is the effect of a large bit depth on the color range of an image?",
+      "back": "It increases the number of unique colors that can be represented."
+    },
+    {
+      "front": "Why are image features referred to as \"landmarks\"?",
+      "back": "They provide building blocks for computers to interpret and analyze complex scenes."
+    },
+    {
+      "front": "In a pinhole camera, light travels in _____ lines.",
+      "back": "Straight"
+    },
+    {
+      "front": "What type of feature is most useful for scene classification tasks?",
+      "back": "Global features."
+    },
+    {
+      "front": "What does the term \"distinctiveness\" refer to in feature selection?",
+      "back": "The ability of a feature to be uniquely identified among others."
+    }
+  ]
+}

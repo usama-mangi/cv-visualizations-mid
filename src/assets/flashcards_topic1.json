@@ -1,0 +1,225 @@
+{
+  "title": "Features Flashcards",
+  "cards": [
+    {
+      "front": "In computer vision, what are 'image features'?",
+      "back": "Distinctive pieces of information, such as edges or corners, extracted from images to act as landmarks."
+    },
+    {
+      "front": "How do local features differ from global features in image analysis?",
+      "back": "Local features describe specific keypoints or regions, while global features describe the entire image as a whole."
+    },
+    {
+      "front": "Which type of image feature is most suitable for tasks like scene classification or image retrieval?",
+      "back": "Global features."
+    },
+    {
+      "front": "Provide three examples of global image features.",
+      "back": "Color histograms, texture descriptors, and edge histograms."
+    },
+    {
+      "front": "Term: Gray Level Co-occurrence Matrix (GLCM)",
+      "back": "Definition: A statistical method that describes texture by calculating how often pairs of pixel intensities occur in specific directions and distances."
+    },
+    {
+      "front": "Which specific types of patterns do local features typically capture?",
+      "back": "Corners, blobs, edges, and small regions."
+    },
+    {
+      "front": "Define 'edges' in the context of computer vision.",
+      "back": "Significant, abrupt changes in image brightness, color, or texture that signify object boundaries or structural features."
+    },
+    {
+      "front": "What is a 'blob' in image processing?",
+      "back": "A connected set of pixels where properties like intensity or color are uniform or visually distinguishable from the background."
+    },
+    {
+      "front": "In terms of spatial information, what is the main difference between local and global features?",
+      "back": "Local features preserve $(x, y)$ location data, whereas global features usually lose spatial arrangement."
+    },
+    {
+      "front": "Which category of features is more robust to occlusion and rotation: local or global?",
+      "back": "Local features."
+    },
+    {
+      "front": "List three examples of common 'Edge Features' detectors.",
+      "back": "Canny, Sobel, and Prewitt."
+    },
+    {
+      "front": "What does the characteristic of 'Repeatability' measure in a feature detector?",
+      "back": "How consistently the detector can find the same features in an image under varying conditions like lighting, scale, or viewpoint."
+    },
+    {
+      "front": "What is 'Feature Invariance'?",
+      "back": "The ability of a feature to remain stable and recognizable despite changes in scale, rotation, translation, or illumination."
+    },
+    {
+      "front": "Concept: Distinctiveness",
+      "back": "Definition: How unique and identifiable a feature is, helping to avoid confusion between similar-looking points during matching."
+    },
+    {
+      "front": "Why is 'Efficiency' a critical characteristic for features in real-time applications like robotics?",
+      "back": "It ensures the algorithm can run quickly with minimal processing power and memory usage."
+    },
+    {
+      "front": "What is the primary goal of 'Feature Extraction' regarding image data complexity?",
+      "back": "Dimensionality reduction, which transforms high-dimensional pixel data into a smaller set of meaningful representations."
+    },
+    {
+      "front": "Who invented the SIFT (Scale-Invariant Feature Transform) algorithm?",
+      "back": "David Lowe."
+    },
+    {
+      "front": "Name the four primary steps of the SIFT algorithm.",
+      "back": "Scale-space extrema detection, Keypoint localization, Orientation assignment, and Descriptor generation."
+    },
+    {
+      "front": "In SIFT, how are images processed to efficiently cover a wide range of scales?",
+      "back": "The algorithm builds 'octaves' of images where each octave is progressively blurred and then downsampled by a factor of 2."
+    },
+    {
+      "front": "How does SIFT identify potential keypoints during scale-space extrema detection?",
+      "back": "By calculating the Difference of Gaussians ($DoG$) between adjacent blurred images in each octave."
+    },
+    {
+      "front": "What comparison does a pixel undergo to be considered a local extrema in SIFT's $DoG$ images?",
+      "back": "It is compared to its 26 neighbors (8 in the current scale, 9 in the scale above, and 9 in the scale below)."
+    },
+    {
+      "front": "What mathematical expansion is used in SIFT to refine keypoint locations to sub-pixel accuracy?",
+      "back": "The Taylor series expansion of the $DoG$ function."
+    },
+    {
+      "front": "During keypoint filtering in SIFT, what happens to a candidate point if its contrast value $|D(\\hat{x})|$ is below the threshold (e.g., 0.03)?",
+      "back": "The keypoint is discarded as it is likely caused by noise."
+    },
+    {
+      "front": "What is the purpose of the 'Orientation Assignment' step in SIFT?",
+      "back": "To achieve rotation invariance by assigning a consistent direction based on local gradient magnitudes."
+    },
+    {
+      "front": "A standard SIFT descriptor is represented as a vector of how many dimensions?",
+      "back": "128 dimensions."
+    },
+    {
+      "front": "What distance metric is typically used to compare SIFT descriptor vectors during matching?",
+      "back": "Euclidean distance ($L_2$ norm)."
+    },
+    {
+      "front": "Describe the SIFT 'Ratio Test' logic for determining a 'good' match.",
+      "back": "A match is kept if the distance to the nearest neighbor ($d_1$) is significantly smaller than the distance to the second nearest neighbor ($d_2$)."
+    },
+    {
+      "front": "Why are corners considered more distinctive than edges for image matching?",
+      "back": "Corners have gradients changing in multiple directions, whereas edges look similar along their length, leading to ambiguity."
+    },
+    {
+      "front": "The ambiguity where a point can 'slide' along an edge without changing appearance is called the _____.",
+      "back": "Aperture problem."
+    },
+    {
+      "front": "How does the Harris Corner Detector identify corners?",
+      "back": "By analyzing local changes in intensity resulting from small shifts $(u, v)$ in a window around a point."
+    },
+    {
+      "front": "In the Harris Corner Detector, what is represented by the matrix $M$?",
+      "back": "The structure tensor matrix, which captures gradient information and intensity variations around a point."
+    },
+    {
+      "front": "According to Harris Corner Detection, what do two large eigenvalues ($\\lambda_1, \\lambda_2$) of matrix $M$ signify?",
+      "back": "The presence of a corner."
+    },
+    {
+      "front": "In Harris Corner Detection, if one eigenvalue is large and the other is small, what does the region contain?",
+      "back": "An edge."
+    },
+    {
+      "front": "What is the formula for the Harris corner response function $R$?",
+      "back": "$R = \\det(M) - k(\\text{trace}(M))^2$"
+    },
+    {
+      "front": "In the Harris response function, what does a positive value of $R$ indicate?",
+      "back": "A corner."
+    },
+    {
+      "front": "What is the primary motivation for using the FAST (Features from Accelerated Segment Test) detector?",
+      "back": "Speed and suitability for real-time applications where traditional detectors like Harris are too slow."
+    },
+    {
+      "front": "According to the FAST algorithm, when is a pixel $p$ considered a corner?",
+      "back": "If a set of $N$ contiguous pixels (usually 12) in a circle around it are all significantly brighter or all significantly darker than $p$."
+    },
+    {
+      "front": "Describe the 'early rejection' step in the FAST algorithm.",
+      "back": "It first checks only 4 pixels (1, 5, 9, 13); if at least 3 are not all brighter or all darker than the center, the pixel is immediately rejected."
+    },
+    {
+      "front": "Why is 'Non-maximal suppression' (NMS) applied after FAST detection?",
+      "back": "To remove redundant candidate corners that are clustered tightly together, keeping only the strongest response in a neighborhood."
+    },
+    {
+      "front": "List two major disadvantages of the FAST feature extractor.",
+      "back": "It is not scale-invariant and it does not produce a descriptor."
+    },
+    {
+      "front": "What does SURF stand for?",
+      "back": "Speeded-Up Robust Features."
+    },
+    {
+      "front": "Which two tools does SURF use to achieve faster computation than SIFT?",
+      "back": "Integral images and box filters."
+    },
+    {
+      "front": "What is the definition of an 'Integral Image' in the SURF algorithm?",
+      "back": "An intermediate representation where each pixel $(x, y)$ stores the sum of all pixels above and to its left."
+    },
+    {
+      "front": "Which matrix is used by the SURF algorithm for interest point detection?",
+      "back": "The Hessian matrix."
+    },
+    {
+      "front": "How does the BRIEF descriptor differ from SIFT or SURF descriptors?",
+      "back": "BRIEF uses binary strings based on simple intensity comparisons, whereas SIFT and SURF use floating-point values based on gradients."
+    },
+    {
+      "front": "What does ORB stand for and what is its main advantage?",
+      "back": "Oriented FAST and Rotated BRIEF; it is a fast, efficient, and free alternative to SIFT and SURF."
+    },
+    {
+      "front": "In the context of deep learning, what is considered a 'small' dataset?",
+      "back": "A dataset containing from a few hundred to a few tens of thousands of images."
+    },
+    {
+      "front": "When training a convolutional neural network on a small dataset from scratch, what is typically the main issue encountered?",
+      "back": "Overfitting."
+    },
+    {
+      "front": "What is 'Data Augmentation'?",
+      "back": "A technique used to mitigate overfitting by artificially increasing the size of a training set through transformations like rotation or flipping."
+    },
+    {
+      "front": "In the 'Dogs vs. Cats' case study, how much did data augmentation improve the classification accuracy of the baseline model?",
+      "back": "It increased accuracy from $71\\%$ to $82\\%$."
+    },
+    {
+      "front": "What is 'Fine-tuning' in the context of using pre-trained models?",
+      "back": "The process of unfreezing a few of the top layers of a frozen model base used for feature extraction and jointly training them with the new classifier."
+    },
+    {
+      "front": "According to the Week 6 material, what final accuracy was achieved using fine-tuning on the small 'Dogs vs. Cats' dataset?",
+      "back": "$97\\%$."
+    },
+    {
+      "front": "What are the three subsets of data typically used when building an image classification model?",
+      "back": "Training set, validation set, and test set."
+    },
+    {
+      "front": "In the provided SIFT matching case, what does it mean if the ratio $d_1/d_2$ is close to 1?",
+      "back": "The match is ambiguous because there are multiple similar-looking points, so the match should be rejected."
+    },
+    {
+      "front": "What is the 'Structure Tensor' in the context of corner detection?",
+      "back": "A symmetric $2 \\times 2$ matrix summarizing the predominant directions of the gradient in a specified neighborhood around a point."
+    }
+  ]
+}
